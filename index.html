@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 1</title>
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="" alt="">
+        <h1>Brief de diseño</h1>
+    </header>
+    <nav>
+        <a class="link" href="#">Información general</a>
+        <a class="link" href="#">Objetivos del proyecto</a>
+        <a class="link" href="#">Requisitos del cliente</a>
+        <a class="link" href="#">Puntos clave</a>
+    </nav>
+    <main>
+        <table class="informacion">
+            <thead>
+                <tr>
+                    <th colspan="6">
+                        <h3>Información general del proyecto</h3>
+                        <p></p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><label for="nombre">Nombre del proyecto:</label></td>
+                    <td><input type="text" id="nombre" name="nombre"></td>
+                </tr>
+                <tr>
+                    <td><label for="cliente-name">Nombre del cliente:</label></td>
+                    <td><input type="text" id="cliente-name" name="cliente-name"></td>
+                </tr>
+                <tr>
+                    <td><label for="responsable">Responsable del proyecto:</label></td>
+                    <td><input type="text" id="responsable" name="responsable"></td>
+                </tr>
+                <tr>
+                    <td><label for="fecha">Fecha de inicio:</label></td>
+                    <td><input type="date" id="fecha" name="fecha"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Guardar"></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="objetivos">
+            <thead>
+                <tr>
+                    <th colspan="6">
+                        <h3>Objetivos del proyecto</h3>
+                        <p></p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><label for="objetivo">Objetivo general:</label></td>
+                    <td><textarea name="objetivo" rows="3" id="objetivo"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <h4>Objetivos específicos</h4>
+                        <p>Escribir de 2 a 3 objetivos claros y medibles</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="obj1">Objetivo 1:</label></td>
+                    <td><input type="text" id="obj1" name="obj1"></td>
+                </tr>
+                <tr>
+                    <td><label for="obj2">Objetivo 2:</label></td>
+                    <td><input type="text" id="obj2" name="obj2"></td>
+                </tr>
+                <tr>
+                    <td><label for="obj3">Objetivo 3:</label></td>
+                    <td><input type="text" id="obj3" name="obj3"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Agregar objetivo"></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="requisitos">
+            <thead>
+                <tr>
+                    <th colspan="6">
+                        <h3>Requisitos del cliente</h3>
+                        <p></p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="brief-requisitos">
+                <tr>
+                    <td colspan="2">
+                        <p>Marca las casillas de los requisitos correspondientes del proyecto</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="izq">Requisitos funcionales:</td>
+                    <td class="req-func">
+                        <label>
+                            <input type="checkbox" name="formularios" value="formularios_contacto">
+                            Formularios de contacto
+                        </label><br>
+
+                        <label>
+                            <input type="checkbox" name="formularios" value="formularios_registro">
+                            Formularios de registro de usuarios
+                        </label><br>
+
+                        <label>
+                            <input type="checkbox" name="bases_datos" value="conexion_bd">
+                            Conexión a bases de datos
+                        </label><br>
+
+                        <label>
+                            <input type="checkbox" name="autenticacion" value="autenticacion_usuarios">
+                            Sistema de autenticación de usuarios (login/registro)
+                        </label><br>
+
+                        <label>
+                            <input type="checkbox" name="buscador" value="buscador_interno">
+                            Buscador interno en el sitio web
+                        </label><br>
+
+                        <label>
+                            <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                            Panel de administración para gestión de contenido
+                        </label><br>
+
+                        <label>
+                            <input type="checkbox" name="multimedia" value="soporte_multimedia">
+                            Soporte para archivos multimedia (imágenes, videos, audio)
+                        </label><br>
+
+                        <label>
+                            <input type="checkbox" name="seguridad" value="seguridad_ssl">
+                            Implementación de seguridad SSL
+                        </label><br>
+
+                        <label>
+                            <input type="checkbox" name="seo" value="optimizacion_seo">
+                            Optimización SEO para motores de búsqueda
+                        </label><br>
+
+                        <label>
+                            <input type="checkbox" name="integracion" value="redes_sociales">
+                            Integración con redes sociales
+                        </label><br>
+
+                        <label>
+                            <input type="checkbox" name="resolucion" value="diseño_responsive">
+                            Diseño responsive (adaptado a dispositivos móviles)
+                        </label><br>
+
+                        <label>
+                            <input type="checkbox" name="accesibilidad" value="normas_accesibilidad">
+                            Cumplimiento de normas de accesibilidad
+                        </label><br>
+
+                        <label>
+                            <input type="checkbox" name="notificaciones" value="notificaciones_push">
+                            Notificaciones push
+                        </label><br>
+
+                        <label>
+                            <input type="checkbox" name="ecommerce" value="plataforma_ecommerce">
+                            Plataforma de comercio electrónico
+                        </label><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="izq"><label for="obj2">Requisitos no funcionales:</label></td>
+                    <td><input type="text" id="obj2" name="obj2"></td>
+                </tr>
+                <tr>
+                    <td class="izq"><label for="obj3">Restricciones y preferencias:</label></td>
+                    <td><input type="text" id="obj3" name="obj3"></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="publico">
+            <thead>
+                <tr>
+                    <th colspan="6">
+                        <h3>Público Objetivo</h3>
+                        <p></p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td><label for="edad">Edad:</label></td>
+                    <td>
+                        <input list="edades" name="edad" id="edad">
+                        <datalist id="edades">
+                            <option value="10-14">
+                            <option value="15-19">
+                            <option value="20-24">
+                            <option value="25-29">
+                            <option value="30-34">
+                            <option value="35-39">
+                            <option value="40-44">
+                            <option value="45-49">
+                            <option value="50-59">
+                            <option value="60-69">
+                            <option value="+70">
+                        </datalist>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="obj2">Objetivo 2:</label></td>
+                    <td><input type="text" id="obj2" name="obj2"></td>
+                </tr>
+                <tr>
+                    <td><label for="obj3">Objetivo 3:</label></td>
+                    <td><input type="text" id="obj3" name="obj3"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Agregar objetivo"></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <button onclick="agregarRegistro()">Nuevo registro</button>
+        <button onclick="eliminarUltimoRegistro()">Eliminar último registro</button>
+        <button onclick="imprimirRegistro()">Imprimir registro</button>
+        <button onclick="guardarRegistro()">Guardar registro</button>
+        <br>
+
+
+        <p id="fecha"></p>
+        <script>
+            const fecha = new Date();
+
+            const meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+
+            const dia = fecha.getDate();
+            const mes = meses[fecha.getMonth()];
+            const año = fecha.getFullYear();
+
+            const fechaFormateada = `${dia} de ${mes} del ${año}`;
+            document.getElementById("fecha").innerText = "Ciudad Juárez, Chihuahua a: " + fechaFormateada;
+        </script>
+        <br>
+
+        <script>
+            function agregarRegistro() {
+                // Obtener la referencia al cuerpo de la tabla
+                const tbody = document.getElementById("t-body");
+
+                // Crear una nueva fila
+                const newRow = document.createElement("tr");
+
+                // Crear y agregar celdas con campos de entrada a la nueva fila
+                const cellContents = Array(6).fill("<input type='text'>");
+                cellContents.forEach(content => {
+                    const newCell = document.createElement("td");
+                    newCell.innerHTML = content;
+                    newRow.appendChild(newCell);
+                });
+
+                // Agregar la nueva fila al cuerpo de la tabla
+                tbody.appendChild(newRow);
+            }
+
+            function eliminarUltimoRegistro() {
+                const tbody = document.getElementById("t-body");
+                if (tbody.rows.length > 0) {
+                    tbody.deleteRow(tbody.rows.length - 1);
+                }
+            }
+        </script>
+
+    </main>
+    <footer></footer>
+</body>
+
+</html>
