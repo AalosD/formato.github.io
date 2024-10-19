@@ -23,224 +23,226 @@
         <h1>Brief de diseño</h1>
     </header>
     <nav>
-        <a class="link" href="#">Información general</a>
-        <a class="link" href="#">Objetivos del proyecto</a>
-        <a class="link" href="#">Requisitos del cliente</a>
-        <a class="link" href="#">Puntos clave</a>
+        <a class="link" href="#">Instrucciones</a>
+        <div class="dropdown">
+            <a href="index.html" class="link dropbtn">Brief de diseño
+                <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="#info">Información General</a>
+                <a href="#obj">Objetivos del proyecto</a>
+                <a href="#req">Requisitos del cliente</a>
+                <a href="#rest">Restricciones y preferencias</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="index-bench.html" class="link dropbtn">Benchmarking
+                <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="#intro">Introducción</a>
+                <a href="#comp">Competidores</a>
+                <a href="#comparativo">Análisis comparativo</a>
+                <a href="#conclusiones">Conclusiones</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="index-audiencia.html" class="link dropbtn">Investigación de la Audiencia 
+                <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="#demograficos">Datos demográficos</a>
+                <a href="#comportamiento">Comportamiento</a>
+                <a href="#expectativas">Expectativas</a>
+                <a href="#preferencias">Preferencias tecnológicas</a>
+            </div>
+        </div>
     </nav>
+    
     <main>
-        <table class="informacion">
-            <thead>
-                <tr>
-                    <th colspan="6">
-                        <h3>Información general del proyecto</h3>
-                        <p></p>
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><label for="nombre">Nombre del proyecto:</label></td>
-                    <td><input type="text" id="nombre" name="nombre"></td>
-                </tr>
-                <tr>
-                    <td><label for="cliente-name">Nombre del cliente:</label></td>
-                    <td><input type="text" id="cliente-name" name="cliente-name"></td>
-                </tr>
-                <tr>
-                    <td><label for="responsable">Responsable del proyecto:</label></td>
-                    <td><input type="text" id="responsable" name="responsable"></td>
-                </tr>
-                <tr>
-                    <td><label for="fecha">Fecha de inicio:</label></td>
-                    <td><input type="date" id="fecha" name="fecha"></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><input type="submit" value="Guardar"></td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="objetivos">
-            <thead>
-                <tr>
-                    <th colspan="6">
-                        <h3>Objetivos del proyecto</h3>
-                        <p></p>
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><label for="objetivo">Objetivo general:</label></td>
-                    <td><textarea name="objetivo" rows="3" id="objetivo"></textarea></td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <h4>Objetivos específicos</h4>
-                        <p>Escribir de 2 a 3 objetivos claros y medibles</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td><label for="obj1">Objetivo 1:</label></td>
-                    <td><input type="text" id="obj1" name="obj1"></td>
-                </tr>
-                <tr>
-                    <td><label for="obj2">Objetivo 2:</label></td>
-                    <td><input type="text" id="obj2" name="obj2"></td>
-                </tr>
-                <tr>
-                    <td><label for="obj3">Objetivo 3:</label></td>
-                    <td><input type="text" id="obj3" name="obj3"></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><input type="submit" value="Agregar objetivo"></td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="requisitos">
-            <thead>
-                <tr>
-                    <th colspan="6">
-                        <h3>Requisitos del cliente</h3>
-                        <p></p>
-                    </th>
-                </tr>
-            </thead>
-            <tbody class="brief-requisitos">
-                <tr>
-                    <td colspan="2">
-                        <p>Marca las casillas de los requisitos correspondientes del proyecto</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="izq">Requisitos funcionales:</td>
-                    <td class="req-func">
-                        <label>
-                            <input type="checkbox" name="formularios" value="formularios_contacto">
-                            Formularios de contacto
-                        </label><br>
 
-                        <label>
-                            <input type="checkbox" name="formularios" value="formularios_registro">
-                            Formularios de registro de usuarios
-                        </label><br>
+        <section class="grid-container informacion" id="info">
+            <div class="item1 grid-item">
+                <h3>Información general del proyecto</h3>
+            </div>
+            <div class="item2 grid-item"><label for="nombre">Nombre del proyecto:</label></div>
+            <div class="item3 grid-item"><input type="text" id="nombre" name="nombre"></div>
+            <div class="item4 grid-item"><label for="cliente-name">Nombre del cliente:</label></div>
+            <div class="item5 grid-item"><input type="text" id="cliente-name" name="cliente-name"></div>
+            <div class="item6 grid-item"><label for="responsable">Responsable del proyecto:</label></div>
+            <div class="item7 grid-item"><input type="text" id="responsable" name="responsable"></div>
+            <div class="item8 grid-item"><label for="date">Fecha de inicio:</label></div>
+            <div class="item9 grid-item"><input type="date" id="date" name="date"></div>
+            <div class="item10 grid-item"><input type="submit" value="Guardar"></div>
+        </section>
 
-                        <label>
-                            <input type="checkbox" name="bases_datos" value="conexion_bd">
-                            Conexión a bases de datos
-                        </label><br>
+        <section class="grid-container objetivos" id="obj">
+            <div class="item1 grid-item">
+                <h3>Objetivos del proyecto</h3>
+            </div>
+            <div class="item2 grid-item"><label for="obj-general"><b>Objetivo general:</b></label></div>
+            <div class="item3 grid-item"><textarea name="obj-general" id="obj-general"></textarea></div>
+            <div class="item4 grid-item"><label for="cliente-name"><b>Objetivos específicos: </b>Escribir de 2 a 3
+                    objetivos claros y medibles</label></div>
+            <div class="item5 grid-item">
+                <label for="obj1">Objetivo 1:</label>
+                <input type="text" id="obj1" name="obj1"><br><br>
+                <label for="obj1">Objetivo 2:</label>
+                <input type="text" id="obj1" name="obj1"><br><br>
+                <label for="obj1">Objetivo 3:</label>
+                <input type="text" id="obj1" name="obj1"><br><br>
+                <input type="submit" value="Agregar objetivo">
+            </div>
+        </section>
 
-                        <label>
-                            <input type="checkbox" name="autenticacion" value="autenticacion_usuarios">
-                            Sistema de autenticación de usuarios (login/registro)
-                        </label><br>
+        <section class="grid-container requisitos" id="req">
+            <div class="item1 grid-item">
+                <h3>Requisitos del cliente</h3>
+            </div>
+            <div class="item2 grid-item"><label for="obj-general"><b>Requisitos funcionales:</b></label></div>
+            <div class="item3 grid-item"><label>
+                    <input type="checkbox" name="formularios" value="formularios_contacto">
+                    Formularios de contacto
+                </label><br>
 
-                        <label>
-                            <input type="checkbox" name="buscador" value="buscador_interno">
-                            Buscador interno en el sitio web
-                        </label><br>
+                <label>
+                    <input type="checkbox" name="formularios" value="formularios_registro">
+                    Formularios de registro de usuarios
+                </label><br>
 
-                        <label>
-                            <input type="checkbox" name="gestion_contenido" value="panel_administracion">
-                            Panel de administración para gestión de contenido
-                        </label><br>
+                <label>
+                    <input type="checkbox" name="bases_datos" value="conexion_bd">
+                    Conexión a bases de datos
+                </label><br>
 
-                        <label>
-                            <input type="checkbox" name="multimedia" value="soporte_multimedia">
-                            Soporte para archivos multimedia (imágenes, videos, audio)
-                        </label><br>
+                <label>
+                    <input type="checkbox" name="autenticacion" value="autenticacion_usuarios">
+                    Sistema de autenticación de usuarios (login/registro)
+                </label><br>
 
-                        <label>
-                            <input type="checkbox" name="seguridad" value="seguridad_ssl">
-                            Implementación de seguridad SSL
-                        </label><br>
+                <label>
+                    <input type="checkbox" name="buscador" value="buscador_interno">
+                    Buscador interno en el sitio web
+                </label><br>
 
-                        <label>
-                            <input type="checkbox" name="seo" value="optimizacion_seo">
-                            Optimización SEO para motores de búsqueda
-                        </label><br>
+                <label>
+                    <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                    Panel de administración para gestión de contenido
+                </label><br>
 
-                        <label>
-                            <input type="checkbox" name="integracion" value="redes_sociales">
-                            Integración con redes sociales
-                        </label><br>
+                <label>
+                    <input type="checkbox" name="multimedia" value="soporte_multimedia">
+                    Soporte para archivos multimedia (imágenes, videos, audio)
+                </label><br>
 
-                        <label>
-                            <input type="checkbox" name="resolucion" value="diseño_responsive">
-                            Diseño responsive (adaptado a dispositivos móviles)
-                        </label><br>
+                <label>
+                    <input type="checkbox" name="seguridad" value="seguridad_ssl">
+                    Implementación de seguridad SSL
+                </label><br>
 
-                        <label>
-                            <input type="checkbox" name="accesibilidad" value="normas_accesibilidad">
-                            Cumplimiento de normas de accesibilidad
-                        </label><br>
+                <label>
+                    <input type="checkbox" name="seo" value="optimizacion_seo">
+                    Optimización SEO para motores de búsqueda
+                </label><br>
 
-                        <label>
-                            <input type="checkbox" name="notificaciones" value="notificaciones_push">
-                            Notificaciones push
-                        </label><br>
+                <label>
+                    <input type="checkbox" name="integracion" value="redes_sociales">
+                    Integración con redes sociales
+                </label><br>
 
-                        <label>
-                            <input type="checkbox" name="ecommerce" value="plataforma_ecommerce">
-                            Plataforma de comercio electrónico
-                        </label><br>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="izq"><label for="obj2">Requisitos no funcionales:</label></td>
-                    <td><input type="text" id="obj2" name="obj2"></td>
-                </tr>
-                <tr>
-                    <td class="izq"><label for="obj3">Restricciones y preferencias:</label></td>
-                    <td><input type="text" id="obj3" name="obj3"></td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="publico">
-            <thead>
-                <tr>
-                    <th colspan="6">
-                        <h3>Público Objetivo</h3>
-                        <p></p>
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
+                <label>
+                    <input type="checkbox" name="resolucion" value="diseño_responsive">
+                    Diseño responsive (adaptado a dispositivos móviles)
+                </label><br>
 
-                <tr>
-                    <td><label for="edad">Edad:</label></td>
-                    <td>
-                        <input list="edades" name="edad" id="edad">
-                        <datalist id="edades">
-                            <option value="10-14">
-                            <option value="15-19">
-                            <option value="20-24">
-                            <option value="25-29">
-                            <option value="30-34">
-                            <option value="35-39">
-                            <option value="40-44">
-                            <option value="45-49">
-                            <option value="50-59">
-                            <option value="60-69">
-                            <option value="+70">
-                        </datalist>
-                    </td>
-                </tr>
+                <label>
+                    <input type="checkbox" name="accesibilidad" value="normas_accesibilidad">
+                    Cumplimiento de normas de accesibilidad
+                </label><br>
 
-                <tr>
-                    <td><label for="obj2">Objetivo 2:</label></td>
-                    <td><input type="text" id="obj2" name="obj2"></td>
-                </tr>
-                <tr>
-                    <td><label for="obj3">Objetivo 3:</label></td>
-                    <td><input type="text" id="obj3" name="obj3"></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><input type="submit" value="Agregar objetivo"></td>
-                </tr>
-            </tbody>
-        </table>
+                <label>
+                    <input type="checkbox" name="notificaciones" value="notificaciones_push">
+                    Notificaciones push
+                </label><br>
 
+                <label>
+                    <input type="checkbox" name="ecommerce" value="plataforma_ecommerce">
+                    Plataforma de comercio electrónico
+                </label><br>
+                <label for="otros">Otros requisitos:</label>
+                <input type="text" name="otros" id="otros">
+            </div>
+        </section>
+
+        <section class="grid-container requisitos" id="req">
+            <div class="item1 grid-item">
+                <h3>Restricciones y preferencias</h3>
+            </div>
+            <div class="item2 grid-item"><label for="obj-general"><b>colores corporativos:</b></label></div>
+            <div class="item3 grid-item">
+                <label for="primary-color">Color primario</label>
+                <input type="color" id="primary-color" name="primary-color" value="#000000">
+                <br>
+                <label for="secondary1-color">Color secundario 1</label>
+                <input type="color" id="secondary1-color" name="secondary1-color" value="#000000">
+                <br>
+                <label for="secondary2-color">Color secundario 2</label>
+                <input type="color" id="secondary2-color" name="secondary2-color" value="#000000">
+                <br>
+            </div>
+
+            <div class="item4 grid-item"><label for="obj-general"><b>colores corporativos:</b></label></div>
+            <div class="item5 grid-item">
+                <label for="font">Tipografías</label>
+                <input type="text" id="font" name="font">
+            </div>
+            <div class="item6 grid-item"><label for="tecnologias"><b>Tecnologías permitidas:</b></label></div>
+            <div class="item7 grid-item">
+                <label>
+                    <input type="checkbox" name="js" value="js">
+                    JavaScript: Para interacción en el lado del cliente.
+                </label><br>
+
+                <label>
+                    <input type="checkbox" name="php" value="php">
+                    PHP: Para el manejo de formularios y el procesamiento de datos del lado del servidor.
+                </label><br>
+                <label>
+                    <input type="checkbox" name="sql" value="sql">
+                    MySQL: Para bases de datos en sitios que requieren almacenamiento de datos estructurados.
+                </label><br>
+                <label>
+                    <input type="checkbox" name="frame" value="frame">
+                    Frameworks: Para un desarrollo rápido de sitios web responsivos.
+                </label><br>
+                <label>
+                    <input type="checkbox" name="sass" value="sass">
+                    SASS: Para una mejor organización y mantenimiento de CSS en proyectos grandes.
+                </label><br>
+                <label>
+                    <input type="checkbox" name="wp" value="wp">
+                    WordPress: Para sitios que requieren fácil autogestión por parte del cliente.
+                </label><br>
+                <label>
+                    <input type="checkbox" name="node" value="node">
+                    Node.js: Para aplicaciones en tiempo real o de alta concurrencia.
+                </label><br>
+                <label>
+                    <input type="checkbox" name="ssl" value="ssl">
+                    SSL/TLS: Para garantizar la seguridad y protección de datos en sitios sensibles.
+                </label><br>
+                <label>
+                    <input type="checkbox" name="pyt" value="pyt">
+                    Python: Para procesamiento avanzado de datos o IA.
+                </label><br>
+                <label>
+                    <input type="checkbox" name="pyt" value="pyt">
+                    REST APIs: Para integrar servicios externos como pagos en línea, autenticación o servicios
+                    de terceros.
+                </label><br>
+                <input type="submit" value="Agregar tecnología">
+            </div>
+        </section>
 
         <button onclick="agregarRegistro()">Nuevo registro</button>
         <button onclick="eliminarUltimoRegistro()">Eliminar último registro</button>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 1</title>
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="" alt="">
+        <h1>Brief de diseño</h1>
+    </header>
+
+    <!-- inicio de nav -->
+    <nav>
+        <a class="link" href="#">Instrucciones</a>
+        <div class="dropdown">
+            <a href="index.html" class="link dropbtn">Brief de diseño
+                <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="#info">Información General</a>
+                <a href="#obj">Objetivos del proyecto</a>
+                <a href="#req">Requisitos del cliente</a>
+                <a href="#rest">Restricciones y preferencias</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="index-bench.html" class="link dropbtn">Benchmarking
+                <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="#intro">Introducción</a>
+                <a href="#comp">Competidores</a>
+                <a href="#comparativo">Análisis comparativo</a>
+                <a href="#conclusiones">Conclusiones</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="index-audiencia.html" class="link dropbtn">Investigación de la Audiencia 
+                <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="#demograficos">Datos demográficos</a>
+                <a href="#comportamiento">Comportamiento</a>
+                <a href="#expectativas">Expectativas</a>
+                <a href="#preferencias">Preferencias tecnológicas</a>
+            </div>
+        </div>
+    </nav>
+    <!-- fin de nav -->
+
+    <main>
+        <section class="grid-container objetivo" id="intro">
+            <div class="item1 grid-item">
+                <h3>Introducción</h3>
+            </div>
+            <div class="item2 grid-item"><label for="objetivo">Objetivo del análisis:</label></div>
+            <div class="item3 grid-item"><textarea name="objetivo" id="objetivo"></textarea></div>
+            <div class="item4 grid-item"><label for="sector">Descripción general del sector:</label></div>
+            <div class="item5 grid-item"><textarea name="sector" id="sector"
+                placeholder="Breve descripción del sector de mercado"></textarea>
+            </div>
+            <div class="item6 grid-item"><label for="responsable">Responsable del proyecto:</label></div>
+            <div class="item7 grid-item"><input type="text" id="responsable" name="responsable"></div>
+            <div class="item10 grid-item"><input type="submit" value="Guardar"></div>
+        </section>
+
+        <section class="grid-container competidores" id="comp">
+            <div class="item1 grid-item">
+                <h3>Competidores</h3>
+            </div>
+            <div class="item2 grid-item"><label for="objetivo">Competidor 1:</label></div>
+            <div class="item3 grid-item">
+                <div class="item-comp"><label for="comp1">Nombre de la empresa:</label>
+                    <input type="text" id="comp1" name="comp1">
+                </div>
+                <div class="item-comp"><label for="screen">Sube una captura de pantalla del sitio web</label><br>
+                    <input type="file" name="screen" id="screen">
+                </div>
+                <div class="item-comp">
+                    <label for="url">URL del sitio web:</label>
+                    <input type="url" id="url" name="url">
+                </div>
+                <div class="item-comp">
+                    <label for="positivos">Aspectos positivos:</label>
+                    <textarea id="positivos" name="positivos"></textarea>
+                </div>
+                <div class="item-comp">
+                    <label for="negativos">Aspectos negativos:</label>
+                    <textarea type="url" id="negativos" name="negativos"></textarea>
+                </div>
+            </div>
+            <div class="item4 grid-item">
+                <label for="objetivo">Competidor 2:</label>
+            </div>
+
+            <div class="item5 grid-item">
+                <div class="item-comp"><label for="comp1">Nombre de la empresa:</label>
+                    <input type="text" id="comp1" name="comp1">
+                </div>
+                <div class="item-comp"><label for="screen">Sube una captura de pantalla del sitio web</label><br>
+                    <input type="file" name="screen" id="screen">
+                </div>
+                <div class="item-comp">
+                    <label for="url">URL del sitio web:</label>
+                    <input type="url" id="url" name="url">
+                </div>
+                <div class="item-comp">
+                    <label for="positivos">Aspectos positivos:</label>
+                    <textarea id="positivos" name="positivos"></textarea>
+                </div>
+                <div class="item-comp">
+                    <label for="negativos">Aspectos negativos:</label>
+                    <textarea type="url" id="negativos" name="negativos"></textarea>
+                </div>
+            </div>
+            <div class="item10 grid-item"><input type="submit" value="Agregar competidor"></div>
+        </section>
+
+        <section class="grid-container comparativo" id="comparativo">
+            <div class="item1 grid-item">
+                <h3>Análisis comparativo</h3>
+            </div>
+            <div class="item2 grid-item"><label for="objetivo">Competidor 1:</label></div>
+            <div class="item3 grid-item">
+                <div class="item-comp"><label for="comp1">¿Cómo calificarías la facilidad de uso general?</label><br>
+                    <span>1-Muy baja </span><input type="range" max="5"><span> 5-Muy alta</span>
+                </div>
+                <div class="item-comp"><label for="dificultad">Describe cualquier dificultad que encontraste al usar el sitio.</label><br>
+                    <textarea name="dificultad" id="dificultad"></textarea>
+                </div>
+
+                <div class="item-comp">
+                    <label for="utilidad">Selecciona las características que encontraste útiles:</label><br>
+                        <label>
+                            <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                            Navegación clara
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                            Búsqueda intuitiva
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                            Contraste adecuado entre fondo y texto
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                            Iconos y botones fáciles de entender
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                            Tipografía legible
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                            Diseño atractivo
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                            Modo oscuro disponible
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                            Integración con redes sociales
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                            Colores que reflejan la identidad de la marca
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                            Tonos suaves y agradables para la vista
+                        </label><br>
+                        <label for="otras">Otras:</label>
+                        <input type="text" id="otras" name="otras">
+                </div>
+            </div>
+
+            <div class="item4 grid-item">
+                <label for="objetivo">Competidor 2:</label>
+            </div>
+
+            <div class="item5 grid-item">
+                <div class="item-comp"><label for="comp1">¿Cómo calificarías la facilidad de uso general?</label><br>
+                    <span>1-Muy baja </span><input type="range" max="5"><span> 5-Muy alta</span>
+                </div>
+                <div class="item-comp"><label for="dificultad">Describe cualquier dificultad que encontraste al usar el sitio.</label><br>
+                    <textarea name="dificultad" id="dificultad"></textarea>
+                </div>
+
+                <div class="item-comp">
+                    <label for="utilidad">Selecciona las características que encontraste útiles:</label><br>
+                        <label>
+                            <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                            Navegación clara
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                            Búsqueda intuitiva
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                            Contraste adecuado entre fondo y texto
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                            Iconos y botones fáciles de entender
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                            Tipografía legible
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                            Diseño atractivo
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                            Modo oscuro disponible
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                            Integración con redes sociales
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                            Colores que reflejan la identidad de la marca
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                            Tonos suaves y agradables para la vista
+                        </label><br>
+                        <label for="otras">Otras:</label>
+                        <input type="text" id="otras" name="otras">
+                </div>
+            </div>
+            <div class="item10 grid-item"><input type="submit" value="Agregar competidor"></div>
+        </section>
+
+        <section class="grid-container conclusiones" id="conclusiones">
+            <div class="item1 grid-item">
+                <h3>Conclusiones</h3>
+            </div>
+            <div class="item2 grid-item"><label for="hallazgos">Principales hallazgos:</label></div>
+            <div class="item3 grid-item"><textarea name="hallazgos" id="hallazgos"></textarea></div>
+            <div class="item4 grid-item"><label for="oportunidades">Oportunidades de mejora para el proyecto propio:</label></div>
+            <div class="item5 grid-item"><textarea name="oportunidades" id="oportunidades"></textarea></div>
+            <div class="item10 grid-item"><input type="submit" value="Guardar"></div>
+        </section>
+
+        <button onclick="agregarRegistro()">Nuevo registro</button>
+        <button onclick="eliminarUltimoRegistro()">Eliminar último registro</button>
+        <button onclick="imprimirRegistro()">Imprimir registro</button>
+        <button onclick="guardarRegistro()">Guardar registro</button>
+        <br>
+
+
+        <p id="fecha"></p>
+        <script>
+            const fecha = new Date();
+
+            const meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+
+            const dia = fecha.getDate();
+            const mes = meses[fecha.getMonth()];
+            const año = fecha.getFullYear();
+
+            const fechaFormateada = `${dia} de ${mes} del ${año}`;
+            document.getElementById("fecha").innerText = "Ciudad Juárez, Chihuahua a: " + fechaFormateada;
+        </script>
+        <br>
+
+        <script>
+            function agregarRegistro() {
+                // Obtener la referencia al cuerpo de la tabla
+                const tbody = document.getElementById("t-body");
+
+                // Crear una nueva fila
+                const newRow = document.createElement("tr");
+
+                // Crear y agregar celdas con campos de entrada a la nueva fila
+                const cellContents = Array(6).fill("<input type='text'>");
+                cellContents.forEach(content => {
+                    const newCell = document.createElement("td");
+                    newCell.innerHTML = content;
+                    newRow.appendChild(newCell);
+                });
+
+                // Agregar la nueva fila al cuerpo de la tabla
+                tbody.appendChild(newRow);
+            }
+
+            function eliminarUltimoRegistro() {
+                const tbody = document.getElementById("t-body");
+                if (tbody.rows.length > 0) {
+                    tbody.deleteRow(tbody.rows.length - 1);
+                }
+            }
+        </script>
+
+    </main>
+    <footer></footer>
+</body>
+
+</html>
