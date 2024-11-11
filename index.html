@@ -1,301 +1,630 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practica 1</title>
-    <link rel="stylesheet" href="css/estilo.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Metodología Mobile First</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
-    <header>
-        <img src="" alt="">
-        <h1>Brief de diseño</h1>
-    </header>
-    <nav>
-        <a class="link" href="#">Instrucciones</a>
-        <div class="dropdown">
-            <a href="index.html" class="link dropbtn">Brief de diseño
-                <i class="fa fa-caret-down"></i>
-            </a>
-            <div class="dropdown-content">
-                <a href="#info">Información General</a>
-                <a href="#obj">Objetivos del proyecto</a>
-                <a href="#req">Requisitos del cliente</a>
-                <a href="#rest">Restricciones y preferencias</a>
-            </div>
+    <div class="container">
+        <h1>EduMobile Web Design</h1>
+        <h2>Etapa de Planeación</h2>
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
         </div>
-        <div class="dropdown">
-            <a href="index-bench.html" class="link dropbtn">Benchmarking
-                <i class="fa fa-caret-down"></i>
-            </a>
-            <div class="dropdown-content">
-                <a href="#intro">Introducción</a>
-                <a href="#comp">Competidores</a>
-                <a href="#comparativo">Análisis comparativo</a>
-                <a href="#conclusiones">Conclusiones</a>
-            </div>
+
+        <!-- Fase 1 -->
+        <div class="phase" id="phase1">
+            <fieldset>
+                <legend>
+                    <h2>Fase 1: Brief de diseño</h2>
+                </legend>
+                <p>En esta sección resolverás las fases de <b>Identificación de los objetivos del proyecto web</b> y
+                    <b>Establecimiento de los requisitos del cliente</b>
+                    del proyecto web.
+                </p>
+                <p>Llena los campos que se muestran a continuacion y después contesta las preguntas para continuar a la
+                    siguiente sección.</p>
+            </fieldset>
+
+            <fieldset>
+                <section class="grid-container informacion" id="info">
+                    <div class="item1 grid-item">
+                        <h3>Información general del proyecto</h3>
+                    </div>
+                    <div class="item2 grid-item"><label for="nombre">Nombre del proyecto:</label></div>
+                    <div class="item3 grid-item"><input type="text" id="nombre" name="nombre"></div>
+                    <div class="item4 grid-item"><label for="cliente-name">Nombre del cliente:</label></div>
+                    <div class="item5 grid-item"><input type="text" id="cliente-name" name="cliente-name"></div>
+                    <div class="item6 grid-item"><label for="responsable">Responsable del proyecto:</label></div>
+                    <div class="item7 grid-item"><input type="text" id="responsable" name="responsable"></div>
+                    <div class="item8 grid-item"><label for="date">Fecha de inicio:</label></div>
+                    <div class="item9 grid-item"><input type="date" id="date" name="date"></div>
+                </section>
+
+            </fieldset>
+            <fieldset>
+                <section class="grid-container objetivos" id="obj">
+                    <div class="item1 grid-item">
+                        <h3>Objetivos del proyecto</h3>
+                    </div>
+                    <div class="item2 grid-item"><label for="obj-general"><b>Objetivo general:</b></label></div>
+                    <div class="item3 grid-item"><textarea name="obj-general" id="obj-general"></textarea></div>
+                    <div class="item4 grid-item"><label for="cliente-name"><b>Objetivos específicos: </b>Escribir de 2 a
+                            3
+                            objetivos claros y medibles</label></div>
+                    <div id="item5" class="item5 grid-item">
+                        <label for="obj1">Objetivo 1:</label>
+                        <input type="text" id="obj1" name="obj1"><br><br>
+                        <label for="obj2">Objetivo 2:</label>
+                        <input type="text" id="obj2" name="obj2"><br><br>
+                        <label for="obj3">Objetivo 3:</label>
+                        <input type="text" id="obj3" name="obj3"><br><br>
+                        <label for="obj4">Otro objetivo:</label>
+                        <input type="text" id="obj4" name="obj4"><br><br>
+                    </div>
+                    <!-- <div class="item7 grid-item">
+                        <input type="button" value="Agregar objetivo" onclick="agregarObjetivo()">
+                    </div> -->
+
+                    <script src="script-objetivo.js"></script>
+                </section>
+            </fieldset>
+            <fieldset>
+                <section class="grid-container requisitos" id="req">
+                    <div class="item1 grid-item">
+                        <h3>Requisitos del cliente</h3>
+                    </div>
+                    <div class="item2 grid-item"><label for="obj-general"><b>Requisitos funcionales:</b></label></div>
+                    <div class="item3 grid-item"><label>
+                            <input type="checkbox" name="formularios" value="formularios_contacto">
+                            Formularios de contacto
+                        </label><br>
+
+                        <label>
+                            <input type="checkbox" name="formularios" value="formularios_registro">
+                            Formularios de registro de usuarios
+                        </label><br>
+
+                        <label>
+                            <input type="checkbox" name="bases_datos" value="conexion_bd">
+                            Conexión a bases de datos
+                        </label><br>
+
+                        <label>
+                            <input type="checkbox" name="autenticacion" value="autenticacion_usuarios">
+                            Sistema de autenticación de usuarios (login/registro)
+                        </label><br>
+
+                        <label>
+                            <input type="checkbox" name="buscador" value="buscador_interno">
+                            Buscador interno en el sitio web
+                        </label><br>
+
+                        <label>
+                            <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                            Panel de administración para gestión de contenido
+                        </label><br>
+
+                        <label>
+                            <input type="checkbox" name="multimedia" value="soporte_multimedia">
+                            Soporte para archivos multimedia (imágenes, videos, audio)
+                        </label><br>
+
+                        <label>
+                            <input type="checkbox" name="seguridad" value="seguridad_ssl">
+                            Implementación de seguridad SSL
+                        </label><br>
+
+                        <label>
+                            <input type="checkbox" name="seo" value="optimizacion_seo">
+                            Optimización SEO para motores de búsqueda
+                        </label><br>
+
+                        <label>
+                            <input type="checkbox" name="integracion" value="redes_sociales">
+                            Integración con redes sociales
+                        </label><br>
+
+                        <label>
+                            <input type="checkbox" name="resolucion" value="diseño_responsive">
+                            Diseño responsive (adaptado a dispositivos móviles)
+                        </label><br>
+
+                        <label>
+                            <input type="checkbox" name="accesibilidad" value="normas_accesibilidad">
+                            Cumplimiento de normas de accesibilidad
+                        </label><br>
+
+                        <label>
+                            <input type="checkbox" name="notificaciones" value="notificaciones_push">
+                            Notificaciones push
+                        </label><br>
+
+                        <label>
+                            <input type="checkbox" name="ecommerce" value="plataforma_ecommerce">
+                            Plataforma de comercio electrónico
+                        </label><br>
+                        <label for="otros">Otros requisitos:</label>
+                        <input type="text" name="otros" id="otros">
+                    </div>
+                </section>
+            </fieldset>
+            <fieldset>
+                <section class="grid-container requisitos" id="requisitos">
+                    <div class="item1 grid-item">
+                        <h3>Restricciones y preferencias</h3>
+                    </div>
+                    <div class="item2 grid-item"><label for="obj-general"><b>colores corporativos:</b></label></div>
+                    <div class="item3 grid-item">
+                        <label for="primary-color">Color primario</label>
+                        <input type="color" id="primary-color" name="primary-color" value="#000000">
+                        <br>
+                        <label for="secondary1-color">Color secundario 1</label>
+                        <input type="color" id="secondary1-color" name="secondary1-color" value="#000000">
+                        <br>
+                        <label for="secondary2-color">Color secundario 2</label>
+                        <input type="color" id="secondary2-color" name="secondary2-color" value="#000000">
+                        <br>
+                    </div>
+
+                    <div class="item4 grid-item"><label for="obj-general"><b>Tipografías corporativas:</b></label></div>
+                    <div class="item5 grid-item">
+
+                        <input type="text" id="font" name="font" placeholder="Tipografías">
+                    </div>
+                    <div class="item6 grid-item"><b>Tecnologías permitidas:</b></div>
+                    <div class="item7 grid-item">
+                        <label>
+                            <input type="checkbox" name="js" value="js">
+                            JavaScript: Para interacción en el lado del cliente.
+                        </label><br>
+
+                        <label>
+                            <input type="checkbox" name="php" value="php">
+                            PHP: Para el manejo de formularios y el procesamiento de datos del lado del servidor.
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="sql" value="sql">
+                            MySQL: Para bases de datos en sitios que requieren almacenamiento de datos estructurados.
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="frame" value="frame">
+                            Frameworks: Para un desarrollo rápido de sitios web responsivos.
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="sass" value="sass">
+                            SASS: Para una mejor organización y mantenimiento de CSS en proyectos grandes.
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="wp" value="wp">
+                            WordPress: Para sitios que requieren fácil autogestión por parte del cliente.
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="node" value="node">
+                            Node.js: Para aplicaciones en tiempo real o de alta concurrencia.
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="ssl" value="ssl">
+                            SSL/TLS: Para garantizar la seguridad y protección de datos en sitios sensibles.
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="pyt" value="pyt">
+                            Python: Para procesamiento avanzado de datos o IA.
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="pyt" value="pyt">
+                            REST APIs: Para integrar servicios externos como pagos en línea, autenticación o servicios
+                            de terceros.
+                        </label><br>
+                        <label for="tec">Otras tecnologías:
+                        </label>
+                        <input type="text" name="tec" id="tec"><br>
+                    </div>
+                </section>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <h3>Ejercicio reflexivo</h3>
+                </legend>
+                <p>Responde a las siguientes preguntas marcando en el cuadro y presiona el boton para pasar a la
+                    siguiente sección.</p>
+                <div class="checklist">
+                    <label>
+                        <input type="checkbox" name="formularios" value="formularios_contacto">
+                        ¿Dentro de los objetivos, se consideró importante el diseño para los dispositivos mobiles como
+                        primera opción?
+                    </label><br><br>
+
+                    <label>
+                        <input type="checkbox" name="formularios" value="formularios_registro">
+                        ¿En los requisitos funcionales, se consideró el enfoque Mobile First en opciones como la
+                        optimización para motores de búsqueda?
+                    </label><br><br>
+
+                    <label>
+                        <input type="checkbox" name="bases_datos" value="conexion_bd">
+                        ¿En las tecnologías permitidas, se contempló el uso de frameworks con el enfoque Mobile First?
+                    </label><br><br>
+                </div>
+                <button onclick="nextPhase(1)" id="complete-phase1" disabled>Completar Fase 1</button>
+            </fieldset>
         </div>
-        <div class="dropdown">
-            <a href="index-audiencia.html" class="link dropbtn">Investigación de la Audiencia 
-                <i class="fa fa-caret-down"></i>
-            </a>
-            <div class="dropdown-content">
-                <a href="#demograficos">Datos demográficos</a>
-                <a href="#comportamiento">Comportamiento</a>
-                <a href="#expectativas">Expectativas</a>
-                <a href="#preferencias">Preferencias tecnológicas</a>
-            </div>
+
+        <!-- Fase 2 -->
+        <div class="phase" id="phase2" style="display:none;">
+            <fieldset>
+                <legend>
+                    <h2>Fase 2: Benchmarking</h2>
+                </legend>
+                <p>En el benchmarking se debe analizar las páginas web consideradas como las mejores del sector, con la
+                    finalidad crear un producto de alta calidad, productividad y competitividad.</p>
+            </fieldset>
+            <!-- introduccion -->
+            <fieldset>
+                <section class="grid-container objetivo" id="intro">
+                    <div class="item1 grid-item">
+                        <h3>Introducción</h3>
+                    </div>
+                    <div class="item2 grid-item"><label for="objetivo">Objetivo del análisis:</label></div>
+                    <div class="item3 grid-item"><textarea name="objetivo" id="objetivo"></textarea></div>
+                    <div class="item4 grid-item"><label for="sector">Descripción general del sector:</label></div>
+                    <div class="item5 grid-item"><textarea name="sector" id="sector"
+                            placeholder="Breve descripción del sector de mercado"></textarea>
+                    </div>
+                    <div class="item6 grid-item"><label for="responsable">Responsable del proyecto:</label></div>
+                    <div class="item7 grid-item"><input type="text" id="responsable" name="responsable"></div>
+                    <div class="item10 grid-item"><input type="button" value="Guardar"></div>
+                </section>
+            </fieldset>
+
+
+            <!-- Competidores -->
+            <fieldset>
+                <section class="grid-container competidores" id="comp">
+                    <div class="item1 grid-item">
+                        <h3>Competidores</h3>
+                    </div>
+                    <div class="item2 grid-item"><label for="objetivo">Competidor 1:</label></div>
+                    <div class="item3 grid-item">
+                        <div class="item-comp"><label for="comp1">Nombre de la empresa:</label>
+                            <input type="text" id="comp1" name="comp1">
+                        </div>
+                        <div class="item-comp"><label for="screen">Sube una captura de pantalla del sitio
+                                web</label><br>
+                            <input type="file" name="screen" id="screen">
+                        </div>
+                        <div class="item-comp">
+                            <label for="url">URL del sitio web:</label>
+                            <input type="url" id="url" name="url">
+                        </div>
+                        <div class="item-comp">
+                            <label for="positivos">Aspectos positivos:</label>
+                            <textarea id="positivos" name="positivos"></textarea>
+                        </div>
+                        <div class="item-comp">
+                            <label for="negativos">Aspectos negativos:</label>
+                            <textarea type="url" id="negativos" name="negativos"></textarea>
+                        </div>
+                    </div>
+                    <div class="item4 grid-item">
+                        <label for="objetivo">Competidor 2:</label>
+                    </div>
+
+                    <div class="item5 grid-item">
+                        <div class="item-comp"><label for="comp1">Nombre de la empresa:</label>
+                            <input type="text" id="comp1" name="comp1">
+                        </div>
+                        <div class="item-comp"><label for="screen">Sube una captura de pantalla del sitio
+                                web</label><br>
+                            <input type="file" name="screen" id="screen">
+                        </div>
+                        <div class="item-comp">
+                            <label for="url">URL del sitio web:</label>
+                            <input type="url" id="url" name="url">
+                        </div>
+                        <div class="item-comp">
+                            <label for="positivos">Aspectos positivos:</label>
+                            <textarea id="positivos" name="positivos"></textarea>
+                        </div>
+                        <div class="item-comp">
+                            <label for="negativos">Aspectos negativos:</label>
+                            <textarea type="url" id="negativos" name="negativos"></textarea>
+                        </div>
+                    </div>
+                    <div class="item10 grid-item"><input type="button" value="Agregar competidor"></div>
+                </section>
+            </fieldset>
+
+            <!-- Analisis comparativo -->
+            <fieldset>
+                <section class="grid-container comparativo" id="comparativo">
+                    <div class="item1 grid-item">
+                        <h3>Análisis comparativo</h3>
+                    </div>
+                    <div class="item2 grid-item"><label for="objetivo">Competidor 1:</label></div>
+                    <div class="item3 grid-item">
+                        <div class="item-comp"><label for="comp1">¿Cómo calificarías la facilidad de uso
+                                general?</label><br>
+                            <span>1-Muy baja </span><input type="range" max="5"><span> 5-Muy alta</span>
+                        </div>
+                        <div class="item-comp"><label for="dificultad">Describe cualquier dificultad que encontraste al
+                                usar el sitio.</label><br>
+                            <textarea name="dificultad" id="dificultad"></textarea>
+                        </div>
+
+                        <div class="item-comp">
+                            <label for="utilidad">Selecciona las características que encontraste útiles:</label><br>
+                            <label>
+                                <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                                Navegación clara
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                                Búsqueda intuitiva
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                                Contraste adecuado entre fondo y texto
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                                Iconos y botones fáciles de entender
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                                Tipografía legible
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                                Diseño atractivo
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                                Modo oscuro disponible
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                                Integración con redes sociales
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                                Colores que reflejan la identidad de la marca
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                                Tonos suaves y agradables para la vista
+                            </label><br>
+                            <label for="otras">Otras:</label>
+                            <input type="text" id="otras" name="otras">
+                        </div>
+                    </div>
+
+                    <div class="item4 grid-item">
+                        <label for="objetivo">Competidor 2:</label>
+                    </div>
+
+                    <div class="item5 grid-item">
+                        <div class="item-comp"><label for="comp1">¿Cómo calificarías la facilidad de uso
+                                general?</label><br>
+                            <span>1-Muy baja </span><input type="range" max="5"><span> 5-Muy alta</span>
+                        </div>
+                        <div class="item-comp"><label for="dificultad">Describe cualquier dificultad que encontraste al
+                                usar el sitio.</label><br>
+                            <textarea name="dificultad" id="dificultad"></textarea>
+                        </div>
+
+                        <div class="item-comp">
+                            <label for="utilidad">Selecciona las características que encontraste útiles:</label><br>
+                            <label>
+                                <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                                Navegación clara
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                                Búsqueda intuitiva
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                                Contraste adecuado entre fondo y texto
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                                Iconos y botones fáciles de entender
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                                Tipografía legible
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                                Diseño atractivo
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                                Modo oscuro disponible
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                                Integración con redes sociales
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                                Colores que reflejan la identidad de la marca
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="gestion_contenido" value="panel_administracion">
+                                Tonos suaves y agradables para la vista
+                            </label><br>
+                            <label for="otras">Otras:</label>
+                            <input type="text" id="otras" name="otras">
+                        </div>
+                    </div>
+                    <div class="item10 grid-item"><input type="button" value="Agregar competidor"></div>
+                </section>
+            </fieldset>
+
+            <!-- Conclusiones -->
+            <fieldset>
+                <section class="grid-container conclusiones" id="conclusiones">
+                    <div class="item1 grid-item">
+                        <h3>Conclusiones</h3>
+                    </div>
+                    <div class="item2 grid-item"><label for="hallazgos">Principales hallazgos:</label></div>
+                    <div class="item3 grid-item"><textarea name="hallazgos" id="hallazgos"></textarea></div>
+                    <div class="item4 grid-item"><label for="oportunidades">Oportunidades de mejora para el proyecto
+                            propio:</label></div>
+                    <div class="item5 grid-item"><textarea name="oportunidades" id="oportunidades"></textarea></div>
+                    <div class="item10 grid-item"><input type="submit" value="Guardar"></div>
+                </section>
+
+            </fieldset>
+            <!-- ejercicio reflexivo -->
+            <fieldset>
+                <legend>
+                    <h3>Ejercicio reflexivo</h3>
+                </legend>
+                <p>Responde a las siguientes preguntas marcando en el cuadro y presiona el boton para pasar a la
+                    siguiente sección.</p>
+                <div class="checklist">
+                    <label>
+                        <input type="checkbox" name="formularios" value="formularios_contacto">
+                        ¿La fase de competidores, la captura de pantalla se realizó utilizando un teléfono inteligente?
+                    </label><br><br>
+
+                    <label>
+                        <input type="checkbox" name="formularios" value="formularios_registro">
+                        ¿La fase del análisis comparativo se realizó utilizando un teléfono inteligente?
+                    </label><br><br>
+
+                    <label>
+                        <input type="checkbox" name="bases_datos" value="conexion_bd">
+                        ¿En las oportunidades de mejora, se consideró el diseño Mobile First?
+                    </label><br><br>
+                </div>
+                <button onclick="nextPhase(2)" id="complete-phase2" disabled>Completar Fase 2</button>
+            </fieldset>
+            <!-- <button onclick="nextPhase(2)" id="complete-phase2" disabled>Completar Fase 2</button> -->
         </div>
-    </nav>
-    
-    <main>
 
-        <section class="grid-container informacion" id="info">
-            <div class="item1 grid-item">
-                <h3>Información general del proyecto</h3>
+        <!-- Fase 3 -->
+        <div class="phase" id="phase3" style="display:none;">
+            <fieldset>
+                <legend><h2>Fase 3: Investigación de la audiencia</h2></legend>
+                <section class="grid-container objetivo" id="intro">
+                    <div class="item1 grid-item">
+                        <h3>Introducción</h3>
+                        <p>A continuación se brinda una lista de preguntas para la etapa de Investigación de la Audiencia, selecciona las que consideres que mejor se adaptan al proyecto que estas realizando.</p>
+                    </div>
+                    <div id="demograficos" class="item2 grid-item">
+                        <p><b>Datos demográficos:</b></p>
+                    </div>
+                    <div class="item3 grid-item">
+                        <p>¿Cuál es su edad?</p>
+                        <p>¿Cuál es su género?</p>
+                        <p>¿Cuál es su ocupación actual?</p>
+                        <p>¿En qué país o región reside actualmente?</p>
+                        <p>¿Cuál es su nivel educativo?</p>
+                        <p>¿Cuál es su estado civil?</p>
+                        <p>¿Cuál es el nivel socioeconómico?</p>
+                        <p>¿Cuales son sus Intereses o aficiones?</p>
+                    </div>
+                    <div id="comportamiento" class="item4 grid-item">
+                        <p><b>Preguntas sobre comportamiento:</b></p>
+                    </div>
+                    <div class="item5 grid-item">
+                        <p>¿Cuántas horas al día pasa navegando en internet?</p>
+                        <p>¿Con qué frecuencia utiliza su dispositivo móvil para navegar en sitios web?</p>
+                        <p>¿Cuáles dispositivos utiliza con mayor frecuencia para navegar en internet?</p>
+                        <p>¿En qué tipo de sitios web pasa más tiempo? (Redes sociales, noticias, entretenimiento, compras en
+                            línea, educación y aprendizaje, otros)</p>
+                        <p>¿Con qué frecuencia compra productos o servicios desde su dispositivo móvil?</p>
+                        <p>¿Suele utilizar redes Wi-Fi o su plan de datos móviles para navegar en su teléfono?</p>
+                        <p>¿Utiliza aplicaciones móviles o prefiere acceder a servicios directamente desde el navegador?</p>
+                    </div>
+                    <div id="expectativas" class="item6 grid-item">
+                        <p><b>Expectativas y opiniones:</b></p>
+                    </div>
+                    <div class="item7 grid-item">
+                        <p>¿Qué es lo que más le gusta al navegar en un sitio web móvil?</p>
+                        <p>¿Qué le molesta más al navegar en un sitio web desde su móvil?</p>
+                        <p>¿Qué características espera de un sitio web optimizado para móviles?</p>
+                        <p>¿Cuáles son sus principales expectativas al usar un sitio web móvil?</p>
+                        <p>¿Qué tan importante es para usted que un sitio web esté optimizado para dispositivos móviles?</p>
+                        <p>¿Qué tipo de contenido le resulta más útil o relevante en sitios web móviles?</p>
+                        <p>¿Cuán satisfecho está con la experiencia que ha tenido en sitios web móviles?</p>
+                        <p>¿Ha dejado de usar algún sitio web porque no estaba bien optimizado para su dispositivo móvil?</p>
+                        <p>¿Qué tan probable es que recomiende un sitio web móvil a otras personas si está bien diseñado?</p>
+                    </div>
+                    <div id="preferencias" class="item8 grid-item">
+                        <p><b>Preguntas sobre preferencias tecnológicas:</b></p>
+                    </div>
+                    <div class="item9 grid-item">
+                        <p>¿Prefiere sitios web con modo oscuro o claro en su dispositivo móvil?</p>
+                        <p>¿Con qué frecuencia actualiza las aplicaciones en su dispositivo móvil?</p>
+                        <p>¿Le gusta que los sitios web móviles utilicen funciones como notificaciones?</p>
+                    </div>
+                    <div class="item10 grid-item"><input type="button" value="Guardar"></div>
+                </section>
+            </fieldset>
+            <!-- ejercicio reflexivo -->
+            <fieldset>
+                <legend>
+                    <h3>Ejercicio reflexivo</h3>
+                </legend>
+                <p>Responde a las siguientes preguntas marcando en el cuadro y presiona el boton para pasar a la
+                    siguiente sección.</p>
+                <div class="checklist">
+                    <label>
+                        <input type="checkbox" name="formularios" value="formularios_contacto">
+                        ¿Las preguntas seleccionadas ayudan a entender mejor las necesidades de los usuarios con dispositivos móviles?
+                    </label><br><br>
+
+                    <label>
+                        <input type="checkbox" name="formularios" value="formularios_registro">
+                        ¿Las preguntas elegidas ayudan a identificar los elementos de diseño que podrían mejorar la navegación en móviles?
+                    </label><br><br>
+
+                    <label>
+                        <input type="checkbox" name="bases_datos" value="conexion_bd">
+                        ¿Las preguntas demográficas elegidas aportan información relevante para personalizar la experiencia en móviles?
+                    </label><br><br>
+                </div>
+                <button onclick="nextPhase(3)" id="complete-phase3" disabled>Completar Fase 3</button>
+            </fieldset>
+        </div>
+
+        <!-- Fase 4 
+        <div class="phase" id="phase4" style="display:none;">
+            <h2>Fase 4: Creación de Contenidos</h2>
+            <p>Crea y organiza el contenido de tu sitio web, como textos, imágenes, y otros elementos multimedia.</p>
+            <div class="checklist">
+                <label>
+                    <input type="checkbox" name="contenidos" value="textos">
+                    Textos
+                </label><br>
+                <label>
+                    <input type="checkbox" name="contenidos" value="imagenes">
+                    Imágenes
+                </label><br>
+                <label>
+                    <input type="checkbox" name="contenidos" value="videos">
+                    Videos
+                </label><br>
             </div>
-            <div class="item2 grid-item"><label for="nombre">Nombre del proyecto:</label></div>
-            <div class="item3 grid-item"><input type="text" id="nombre" name="nombre"></div>
-            <div class="item4 grid-item"><label for="cliente-name">Nombre del cliente:</label></div>
-            <div class="item5 grid-item"><input type="text" id="cliente-name" name="cliente-name"></div>
-            <div class="item6 grid-item"><label for="responsable">Responsable del proyecto:</label></div>
-            <div class="item7 grid-item"><input type="text" id="responsable" name="responsable"></div>
-            <div class="item8 grid-item"><label for="date">Fecha de inicio:</label></div>
-            <div class="item9 grid-item"><input type="date" id="date" name="date"></div>
-            <div class="item10 grid-item"><input type="submit" value="Guardar"></div>
-        </section>
+            <button onclick="nextPhase(4)" id="complete-phase4" disabled>Completar Fase 4</button>
+        </div> -->
+        <div class="completion" id="completion" style="display:none; text-align: center;">
+            <h2>¡Has completado todas las fases de la etapa de planeación!</h2>
+            <img src="Recurso1.webp" alt="" style="height: 200px;">
+            <p>Ahora tu proyecto web tiene una base sólida para continuar a la etapa de diseño.</p>
+        </div>
+    </div>
 
-        <section class="grid-container objetivos" id="obj">
-            <div class="item1 grid-item">
-                <h3>Objetivos del proyecto</h3>
-            </div>
-            <div class="item2 grid-item"><label for="obj-general"><b>Objetivo general:</b></label></div>
-            <div class="item3 grid-item"><textarea name="obj-general" id="obj-general"></textarea></div>
-            <div class="item4 grid-item"><label for="cliente-name"><b>Objetivos específicos: </b>Escribir de 2 a 3
-                    objetivos claros y medibles</label></div>
-            <div class="item5 grid-item">
-                <label for="obj1">Objetivo 1:</label>
-                <input type="text" id="obj1" name="obj1"><br><br>
-                <label for="obj1">Objetivo 2:</label>
-                <input type="text" id="obj1" name="obj1"><br><br>
-                <label for="obj1">Objetivo 3:</label>
-                <input type="text" id="obj1" name="obj1"><br><br>
-                <input type="submit" value="Agregar objetivo">
-            </div>
-        </section>
-
-        <section class="grid-container requisitos" id="req">
-            <div class="item1 grid-item">
-                <h3>Requisitos del cliente</h3>
-            </div>
-            <div class="item2 grid-item"><label for="obj-general"><b>Requisitos funcionales:</b></label></div>
-            <div class="item3 grid-item"><label>
-                    <input type="checkbox" name="formularios" value="formularios_contacto">
-                    Formularios de contacto
-                </label><br>
-
-                <label>
-                    <input type="checkbox" name="formularios" value="formularios_registro">
-                    Formularios de registro de usuarios
-                </label><br>
-
-                <label>
-                    <input type="checkbox" name="bases_datos" value="conexion_bd">
-                    Conexión a bases de datos
-                </label><br>
-
-                <label>
-                    <input type="checkbox" name="autenticacion" value="autenticacion_usuarios">
-                    Sistema de autenticación de usuarios (login/registro)
-                </label><br>
-
-                <label>
-                    <input type="checkbox" name="buscador" value="buscador_interno">
-                    Buscador interno en el sitio web
-                </label><br>
-
-                <label>
-                    <input type="checkbox" name="gestion_contenido" value="panel_administracion">
-                    Panel de administración para gestión de contenido
-                </label><br>
-
-                <label>
-                    <input type="checkbox" name="multimedia" value="soporte_multimedia">
-                    Soporte para archivos multimedia (imágenes, videos, audio)
-                </label><br>
-
-                <label>
-                    <input type="checkbox" name="seguridad" value="seguridad_ssl">
-                    Implementación de seguridad SSL
-                </label><br>
-
-                <label>
-                    <input type="checkbox" name="seo" value="optimizacion_seo">
-                    Optimización SEO para motores de búsqueda
-                </label><br>
-
-                <label>
-                    <input type="checkbox" name="integracion" value="redes_sociales">
-                    Integración con redes sociales
-                </label><br>
-
-                <label>
-                    <input type="checkbox" name="resolucion" value="diseño_responsive">
-                    Diseño responsive (adaptado a dispositivos móviles)
-                </label><br>
-
-                <label>
-                    <input type="checkbox" name="accesibilidad" value="normas_accesibilidad">
-                    Cumplimiento de normas de accesibilidad
-                </label><br>
-
-                <label>
-                    <input type="checkbox" name="notificaciones" value="notificaciones_push">
-                    Notificaciones push
-                </label><br>
-
-                <label>
-                    <input type="checkbox" name="ecommerce" value="plataforma_ecommerce">
-                    Plataforma de comercio electrónico
-                </label><br>
-                <label for="otros">Otros requisitos:</label>
-                <input type="text" name="otros" id="otros">
-            </div>
-        </section>
-
-        <section class="grid-container requisitos" id="req">
-            <div class="item1 grid-item">
-                <h3>Restricciones y preferencias</h3>
-            </div>
-            <div class="item2 grid-item"><label for="obj-general"><b>colores corporativos:</b></label></div>
-            <div class="item3 grid-item">
-                <label for="primary-color">Color primario</label>
-                <input type="color" id="primary-color" name="primary-color" value="#000000">
-                <br>
-                <label for="secondary1-color">Color secundario 1</label>
-                <input type="color" id="secondary1-color" name="secondary1-color" value="#000000">
-                <br>
-                <label for="secondary2-color">Color secundario 2</label>
-                <input type="color" id="secondary2-color" name="secondary2-color" value="#000000">
-                <br>
-            </div>
-
-            <div class="item4 grid-item"><label for="obj-general"><b>colores corporativos:</b></label></div>
-            <div class="item5 grid-item">
-                <label for="font">Tipografías</label>
-                <input type="text" id="font" name="font">
-            </div>
-            <div class="item6 grid-item"><label for="tecnologias"><b>Tecnologías permitidas:</b></label></div>
-            <div class="item7 grid-item">
-                <label>
-                    <input type="checkbox" name="js" value="js">
-                    JavaScript: Para interacción en el lado del cliente.
-                </label><br>
-
-                <label>
-                    <input type="checkbox" name="php" value="php">
-                    PHP: Para el manejo de formularios y el procesamiento de datos del lado del servidor.
-                </label><br>
-                <label>
-                    <input type="checkbox" name="sql" value="sql">
-                    MySQL: Para bases de datos en sitios que requieren almacenamiento de datos estructurados.
-                </label><br>
-                <label>
-                    <input type="checkbox" name="frame" value="frame">
-                    Frameworks: Para un desarrollo rápido de sitios web responsivos.
-                </label><br>
-                <label>
-                    <input type="checkbox" name="sass" value="sass">
-                    SASS: Para una mejor organización y mantenimiento de CSS en proyectos grandes.
-                </label><br>
-                <label>
-                    <input type="checkbox" name="wp" value="wp">
-                    WordPress: Para sitios que requieren fácil autogestión por parte del cliente.
-                </label><br>
-                <label>
-                    <input type="checkbox" name="node" value="node">
-                    Node.js: Para aplicaciones en tiempo real o de alta concurrencia.
-                </label><br>
-                <label>
-                    <input type="checkbox" name="ssl" value="ssl">
-                    SSL/TLS: Para garantizar la seguridad y protección de datos en sitios sensibles.
-                </label><br>
-                <label>
-                    <input type="checkbox" name="pyt" value="pyt">
-                    Python: Para procesamiento avanzado de datos o IA.
-                </label><br>
-                <label>
-                    <input type="checkbox" name="pyt" value="pyt">
-                    REST APIs: Para integrar servicios externos como pagos en línea, autenticación o servicios
-                    de terceros.
-                </label><br>
-                <input type="submit" value="Agregar tecnología">
-            </div>
-        </section>
-
-        <button onclick="agregarRegistro()">Nuevo registro</button>
-        <button onclick="eliminarUltimoRegistro()">Eliminar último registro</button>
-        <button onclick="imprimirRegistro()">Imprimir registro</button>
-        <button onclick="guardarRegistro()">Guardar registro</button>
-        <br>
-
-
-        <p id="fecha"></p>
-        <script>
-            const fecha = new Date();
-
-            const meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
-
-            const dia = fecha.getDate();
-            const mes = meses[fecha.getMonth()];
-            const año = fecha.getFullYear();
-
-            const fechaFormateada = `${dia} de ${mes} del ${año}`;
-            document.getElementById("fecha").innerText = "Ciudad Juárez, Chihuahua a: " + fechaFormateada;
-        </script>
-        <br>
-
-        <script>
-            function agregarRegistro() {
-                // Obtener la referencia al cuerpo de la tabla
-                const tbody = document.getElementById("t-body");
-
-                // Crear una nueva fila
-                const newRow = document.createElement("tr");
-
-                // Crear y agregar celdas con campos de entrada a la nueva fila
-                const cellContents = Array(6).fill("<input type='text'>");
-                cellContents.forEach(content => {
-                    const newCell = document.createElement("td");
-                    newCell.innerHTML = content;
-                    newRow.appendChild(newCell);
-                });
-
-                // Agregar la nueva fila al cuerpo de la tabla
-                tbody.appendChild(newRow);
-            }
-
-            function eliminarUltimoRegistro() {
-                const tbody = document.getElementById("t-body");
-                if (tbody.rows.length > 0) {
-                    tbody.deleteRow(tbody.rows.length - 1);
-                }
-            }
-        </script>
-
-    </main>
-    <footer></footer>
+    <script src="script1.js"></script>
 </body>
 
 </html>
